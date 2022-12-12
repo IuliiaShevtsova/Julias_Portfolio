@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 25 11:47:45 2022
-
 Basic statistical functions
 """
 ##############################################################################
@@ -113,7 +111,7 @@ percentile_a75 = np.percentile(a,75)
 print(percentile_a75)
 
 ##############################################################################
-                              #Visualisation with ggplot as in R!
+                              #Visualisation with ggplot!
 ##############################################################################
 
 from plotnine import *
