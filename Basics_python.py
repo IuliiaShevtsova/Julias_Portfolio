@@ -16,7 +16,7 @@ folder_name = os.path.basename(directory_path)
 print(folder_name)
 
 # Changing the CWD
-os.chdir('Desktop/Other/python/')
+os.chdir('/path-to-dir/')
 
 ##############################################################################
                               #Data inspection
@@ -146,7 +146,7 @@ plot=(
 print(plot)
 
 #save as png
-plot.save(path="Desktop/Other/python/plots",filename="test_plot.png")
+plot.save(path="/path-to-dir/",filename="test_plot.png")
 
 ##############################################################################
                               #Data analysis
