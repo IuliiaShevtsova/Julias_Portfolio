@@ -1,12 +1,12 @@
 
-#########################
-#DATA VISUALISATION
-########################
+###################################
+#DATA VISUALISATION with PYTHON
+###################################
 """
+Packages, used here:
 1. Rasterio
 2. Fiona
-3.GDAL
-
+3. GDAL
 """
 
 #-----------------------------------
@@ -17,7 +17,7 @@ import rasterio
 #check versiion
 rasterio.__version__
 #path and name of the file
-path_raster = r'/Users/iuliiashevtsova/Documents/Python_stuff/srtm_germany_dtm.tif'
+path_raster = r'/srtm_germany_dtm.tif'
 #open raster
 raster = rasterio.open(path_raster)
 #convert to an array
@@ -25,17 +25,7 @@ data_rs = raster.read()
 data_rs
 
 raster.meta
-"""What you see:
-{'driver': 'GTiff',
- 'dtype': 'int16',
- 'nodata': None,
- 'width': 13201,
- 'height': 10801,
- 'count': 1,---------------------one band
- 'crs': CRS.from_epsg(4326),-----coordinate system
- 'transform': Affine(0.0008333333333333301, 0.0, 4.999583333333334,
-        0.0, -0.0008333333333333301, 56.000416666666666)}
-"""
+
 raster.name#path to file
 raster.count#band number
 raster.shape#(rows, columns)
@@ -82,8 +72,8 @@ def meta_full(r):
         print('--Quick statistics--')
         print('Unavailable due to presence of NA values')
         
-a = r'/Users/iuliiashevtsova/Documents/Python_stuff/srtm_germany_dtm.tif'    
-b = r'/Users/iuliiashevtsova/Documents/Python_stuff/DEM_crropped.tiff'
+a = r'/srtm_germany_dtm.tif'    
+b = r'/DEM_crropped.tiff'
 
 meta_full(a)#example with no NAs
 meta_full(b)#example with NAs
@@ -123,11 +113,11 @@ import matplotlib.pyplot as plt
 from descartes import PolygonPatch
 
 #open clip layer
-aoi = fiona.open('/Users/iuliiashevtsova/Documents/Python_stuff/AOI.shp')
+aoi = fiona.open('/AOI.shp')
 aoiGeom = Polygon(aoi[0]['geometry']['coordinates'][0])
 
 #open polygon and create list of Polygons
-polyShp = fiona.open('/Users/iuliiashevtsova/Documents/Python_stuff/hills.shp')
+polyShp = fiona.open('/hills.shp')
 polyList = []
 polyProperties = []
 for poly in polyShp:
@@ -179,7 +169,7 @@ plt.show()
 #export clipped polygons as shapefile
 schema = polyShp.schema
 
-outFile = fiona.open('/Users/iuliiashevtsova/Documents/Python_stuff/hills_clipped.shp',mode = 'w',driver = 'ESRI Shapefile', schema=schema)
+outFile = fiona.open('/hills_clipped.shp',mode = 'w',driver = 'ESRI Shapefile', schema=schema)
 for index, poly in enumerate(clipPolyList):
     outFile.write({
         'geometry':mapping(poly),
@@ -195,8 +185,6 @@ import os
 from osgeo import gdal
 import numpy as np
 import matplotlib.pyplot as plt
-
-os.chdir('/Users/iuliiashevtsova/Documents/Python_stuff')
 
 ds = gdal.Open("srtm_germany_dtm.tif")
 #here is example of data with no missing values
@@ -234,7 +222,7 @@ outds = None
 import os
 import numpy as np
 
-os.chdir("/Users/iuliiashevtsova/Documents/Python_stuff/Sentinel2")
+os.chdir("/Sentinel2")
 print(os.listdir(os.getcwd()))
 
 NIR = rasterio.open(r'clip_RT_S2A_OPER_MSI_L1C_TL_MTI__20160506T214824_A004555_T18LTM_B08.tif')
@@ -420,7 +408,7 @@ plt.show()
 
 import pandas as pd
 
-sites = pd.read_csv("/Users/iuliiashevtsova/Documents/Python_stuff/test_points.csv")
+sites = pd.read_csv("/test_points.csv")
 sites.rename(columns = {'rand_point_id':'point_no'}, inplace = True)
 sites.rename(columns = {'NAME_1':'land'}, inplace = True)
 
