@@ -7,4 +7,5 @@ Here are some projects I am working in, grouped by language/tools used:
   <li>Python</li>
   <li>R</li>
   <li>HTML & CSS</li>
+  <li>Blender (3D visualisation)</li>
 </ul>
