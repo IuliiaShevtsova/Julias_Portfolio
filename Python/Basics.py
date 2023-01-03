@@ -1,7 +1,13 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+
 """
 Basic statistical functions
+
+Include:
+Starters - line 13;
+Data inspection - line 28;
+Visualisation with ggplot - line 120;
+Data analysis - line 158;
+
 """
 ##############################################################################
                               #Starters
