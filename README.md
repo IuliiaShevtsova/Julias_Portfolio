@@ -13,6 +13,12 @@ Here are some projects I am working in, grouped by language/tools used:
 <h2>My recent scientific publications</h2>
 <p>My doctorate dissertation:
 <a href="https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/54845/file/shevtsova_diss.pdf">Recent and future vegetation change in the treeline region of Chukotka (NE Russia) inferred from field data, satellite data and modelling</a>
+with a preview:
+</p>
+<p align="center">
+<img src="https://github.com/IuliiaShevtsova/images/blob/fad113670258ab5a7c7ba310a44a89f628b18afb/dissertation_methods_overview.png" width=35% alt= "img">
+<img src="https://github.com/IuliiaShevtsova/images/blob/fad113670258ab5a7c7ba310a44a89f628b18afb/dissertation_classes.png" width=30% alt= "img">
+<img src="https://github.com/IuliiaShevtsova/images/blob/fad113670258ab5a7c7ba310a44a89f628b18afb/dissertation_biomass.png" width=30% alt= "img">
 </p>
 <p>
 Articles:
