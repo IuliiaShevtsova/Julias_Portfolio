@@ -4,10 +4,10 @@ My name is Iuliia Shevtsova-Soßnowski and I am a Dr.rer.nat. in plant ecology a
 <h2>Projects</h2>
 Here are some projects I am working in, grouped by language/tools used:
 <ul>
-  <li>Python</li>
-  <li>R</li>
-  <li>HTML & CSS</li>
-  <li>Blender (3D visualisation)</li>
+  <li><a href="https://github.com/IuliiaShevtsova/Julias_Portfolio/tree/main/Python">Python</a></li>
+  <li>R <strong>(coming soon!)</strong></li>
+  <li><a href="https://github.com/IuliiaShevtsova/Julias_Portfolio/tree/main/HTML%26CSS">HTML & CSS</a></li>
+  <li><a href="https://github.com/IuliiaShevtsova/Julias_Portfolio/tree/main/Blender%20(3D%20visualisation)">Blender (3D visualisation)</a></li>
 </ul>
 
 <h2>My recent scientific publications</h2>
