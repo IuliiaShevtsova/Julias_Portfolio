@@ -10,7 +10,7 @@ Here are some projects I am working in, grouped by language/tools used:
   <li><a href="https://github.com/IuliiaShevtsova/Julias_Portfolio/tree/main/Blender%20(3D%20visualisation)">Blender (3D visualisation)</a></li>
 </ul>
 
-<h2>My recent scientific publications</h2>
+<h2>My recent scientific contributions</h2>
 <p>My doctorate dissertation:
 <a href="https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/54845/file/shevtsova_diss.pdf">Recent and future vegetation change in the treeline region of Chukotka (NE Russia) inferred from field data, satellite data and modelling</a>
 with a preview:
