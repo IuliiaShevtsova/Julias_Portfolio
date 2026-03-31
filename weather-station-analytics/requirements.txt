@@ -6,3 +6,4 @@ pytest
 numpy
 matplotlib
 openpyxl
+plotly
