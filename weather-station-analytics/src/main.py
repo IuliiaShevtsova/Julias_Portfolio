@@ -1,7 +1,8 @@
-from ingestion import load_all_xlsx_to_bronze_df
-from transformation import clean_bronze_df
-from aggregation import build_gold_10min, build_gold_1h, build_gold_1d
-from export import (
+from .ingestion import load_all_xlsx_to_bronze_df
+from .transformation import clean_bronze_df
+from .aggregation import build_gold_10min, build_gold_1h, build_gold_1d
+from .anomaly_detection import add_rolling_robust_anomalies
+from .export import (
     BRONZE_PATH,
     SILVER_PATH,
     GOLD_10MIN_PATH,
@@ -31,10 +32,38 @@ def main() -> None:
 
     print("Step 4: Building gold 1-hour table...")
     gold_1h = build_gold_1h(silver_df)
+    gold_1h = add_rolling_robust_anomalies(
+        gold_1h,
+        variables=[
+            "temp_mean",
+            "rh_mean",
+            "dew_point_mean",
+            "precip_sum",
+            "wind_speed_mean",
+            "station_pressure_mean",
+        ],
+        window=24,
+        threshold=3.5,
+        min_periods=12,
+    )
     save_parquet(gold_1h, GOLD_1H_PATH)
 
     print("Step 5: Building gold 1-day table...")
     gold_1d = build_gold_1d(silver_df)
+    gold_1d = add_rolling_robust_anomalies(
+        gold_1d,
+        variables=[
+            "temp_mean",
+            "rh_mean",
+            "dew_point_mean",
+            "precip_sum",
+            "wind_speed_mean",
+            "station_pressure_mean",
+        ],
+        window=7,
+        threshold=3.5,
+        min_periods=3,
+    )
     save_parquet(gold_1d, GOLD_1D_PATH)
 
     print("Pipeline finished successfully.")
