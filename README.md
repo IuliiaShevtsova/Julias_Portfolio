@@ -1,8 +1,8 @@
 <h1>Welcome to my Portfolio page!</h1>
-My name is Iuliia Shevtsova-Soßnowski and I am a Dr.rer.nat. in plant ecology and a coding enthusiast. 
+My name is Iuliia Shevtsova-Soßnowski and I am a Dr.rer.nat. in plant ecology and last 3 years worked as Software Developer (Data Engeneer/Data Analyst/Data Scientist). 
 
 <h2>Projects</h2>
-Here are some projects I am working in, grouped by language/tools used:
+Here are some example of Projects I have done, grouped by language/tools used:
 <ul>
   <li><a href="https://github.com/IuliiaShevtsova/Julias_Portfolio/tree/main/Python">Python</a></li>
   <li><a href="https://github.com/IuliiaShevtsova/Julias_Portfolio/tree/main/R">R</a></li>
@@ -10,7 +10,7 @@ Here are some projects I am working in, grouped by language/tools used:
   <li><a href="https://github.com/IuliiaShevtsova/Julias_Portfolio/tree/main/Blender%20(3D%20visualisation)">Blender (3D visualisation)</a></li>
 </ul>
 
-<h2>My recent scientific contributions</h2>
+<h2>My scientific contributions</h2>
 <p>My doctorate dissertation:
 <a href="https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/54845/file/shevtsova_diss.pdf">Recent and future vegetation change in the treeline region of Chukotka (NE Russia) inferred from field data, satellite data and modelling</a>
 with a preview:
