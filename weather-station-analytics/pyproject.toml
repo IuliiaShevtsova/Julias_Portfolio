@@ -1,0 +1,22 @@
+[project]
+name = "weather-station-pipeline"
+version = "0.1.0"
+description = "Weather station ETL and analytics pipeline"
+authors = [ { name = "Your Name" } ]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "pyarrow",
+    "duckdb",
+    "streamlit",
+    "pytest",
+    "numpy",
+    "matplotlib",
+    "openpyxl",
+    "plotly",
+]
+
+[tool.black]
+line-length = 88
