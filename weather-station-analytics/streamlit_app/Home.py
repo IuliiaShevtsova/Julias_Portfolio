@@ -1,4 +1,5 @@
 from pathlib import Path
+import time
 import streamlit as st
 import pandas as pd
 from utils.info_notes import PAGE_NOTES
@@ -168,3 +169,5 @@ if station_cols:
         silver[station_cols].drop_duplicates().sort_values("station_id"),
         use_container_width=True
     )
+
+st.caption("To stop the dashboard: press Ctrl+C in the terminal running Streamlit, or run `pkill -f \"streamlit run\"` from another shell.")
